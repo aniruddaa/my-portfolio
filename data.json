@@ -1,0 +1,125 @@
+{
+  "personal": {
+    "name": "Aniruddha Jadhav",
+    "title": "Full Stack Developer",
+    "email": "aniruddha.jadhav@nii.ac.in",
+    "phone": "+91 XXXXX XXXXX",
+    "location": "New Delhi, India",
+    "bio": "A passionate Full Stack Developer with expertise in Web Development, AI/ML, and Cloud Solutions.",
+    "profileImage": "assets/profile.jpg",
+    "resume": "assets/resume.pdf"
+  },
+  "socials": {
+    "github": "https://github.com/yourprofile",
+    "linkedin": "https://linkedin.com/in/yourprofile",
+    "twitter": "https://twitter.com/yourprofile",
+    "instagram": "https://instagram.com/yourprofile"
+  },
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": ["HTML5", "CSS3", "JavaScript", "React", "Vue.js", "Tailwind CSS"],
+      "proficiency": 90
+    },
+    {
+      "category": "Backend",
+      "items": ["Node.js", "Python", "Express", "Django", "REST APIs"],
+      "proficiency": 85
+    },
+    {
+      "category": "Database",
+      "items": ["MongoDB", "PostgreSQL", "MySQL", "Firebase"],
+      "proficiency": 80
+    },
+    {
+      "category": "AI/ML & Cloud",
+      "items": ["Python", "TensorFlow", "AWS", "Google Cloud", "Docker"],
+      "proficiency": 75
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology (B.Tech)",
+      "field": "Computer Science & Engineering",
+      "institution": "National Institute of Information Technology (NIIT)",
+      "year": "Expected 2025"
+    },
+    {
+      "degree": "12th Grade",
+      "field": "Science Stream (PCM)",
+      "institution": "CBSE Board",
+      "year": "2021"
+    }
+  ],
+  "certifications": [
+    "Full Stack Web Development (Udemy)",
+    "Python for Data Science (Coursera)",
+    "AWS Certified Cloud Practitioner"
+  ],
+  "experience": [
+    {
+      "title": "Web Development Intern",
+      "company": "Tech Startup Company",
+      "startDate": "June 2023",
+      "endDate": "December 2023",
+      "description": "Developed responsive web applications using React and Node.js. Optimized website performance resulting in 40% faster load times."
+    },
+    {
+      "title": "Freelance Developer",
+      "company": "Self-Employed",
+      "startDate": "January 2023",
+      "endDate": "Present",
+      "description": "Built custom websites for small businesses and startups. Managed full project lifecycle from design to deployment."
+    }
+  ],
+  "projects": [
+    {
+      "name": "E-Commerce Platform",
+      "description": "A fully functional e-commerce platform with product catalog, shopping cart, and payment integration.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "category": "web",
+      "link": "https://github.com/yourprofile/ecommerce",
+      "demo": "https://your-ecommerce.com"
+    },
+    {
+      "name": "AI Chatbot Application",
+      "description": "An intelligent chatbot powered by NLP and machine learning with context-aware responses.",
+      "technologies": ["Python", "TensorFlow", "NLP", "Flask"],
+      "category": "ai",
+      "link": "https://github.com/yourprofile/chatbot",
+      "demo": "https://your-chatbot.com"
+    },
+    {
+      "name": "Task Management Tool",
+      "description": "A collaborative task management application with real-time updates and team features.",
+      "technologies": ["Vue.js", "Firebase", "Tailwind CSS"],
+      "category": "web",
+      "link": "https://github.com/yourprofile/taskmanager",
+      "demo": "https://your-taskmanager.com"
+    },
+    {
+      "name": "Data Analytics Dashboard",
+      "description": "Interactive dashboard for real-time data visualization and analytics with KPI tracking.",
+      "technologies": ["React", "Chart.js", "PostgreSQL"],
+      "category": "web",
+      "link": "https://github.com/yourprofile/dashboard",
+      "demo": "https://your-dashboard.com"
+    },
+    {
+      "name": "Weather Mobile App",
+      "description": "A responsive weather application with real-time weather updates and forecasts.",
+      "technologies": ["React Native", "Weather API", "Geolocation"],
+      "category": "mobile",
+      "link": "https://github.com/yourprofile/weather-app",
+      "demo": "https://your-weather.com"
+    },
+    {
+      "name": "Tech Blog Platform",
+      "description": "A modern blogging platform with markdown support and SEO optimization.",
+      "technologies": ["Next.js", "Markdown", "Vercel"],
+      "category": "web",
+      "link": "https://github.com/yourprofile/blog",
+      "demo": "https://your-blog.com"
+    }
+  ]
+}

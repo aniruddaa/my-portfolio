@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniruddha Jadhav - Full Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Aniruddha Jadhav - Full Stack Developer specializing in Web Development, AI/ML, and Cloud Solutions">
+    <meta name="keywords" content="Developer, Web Development, AI, ML, Cloud, Portfolio">
+    <meta name="author" content="Aniruddha Jadhav">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    <!-- ===== HEADER & NAVBAR ===== -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-code"></i> AJ Portfolio
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="admin/login.html" class="btn btn-primary">Admin</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate__animated animate__slideInLeft">
+                        Hi, I'm <span>Aniruddha Jadhav</span>
+                    </h1>
+                    <p class="animate__animated animate__slideInLeft">
+                        A passionate Full Stack Developer with expertise in Web Development, AI/ML, and Cloud Solutions. 
+                        Currently seeking opportunities to contribute to innovative projects and grow as a developer.
+                    </p>
+                    <div class="hero-buttons animate__animated animate__slideInLeft">
+                        <button class="btn btn-primary" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </button>
+                        <button class="btn btn-secondary" onclick="document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})">
+                            <i class="fas fa-briefcase"></i> View My Work
+                        </button>
+                    </div>
+                    <div class="social-links" style="margin-top: 40px;">
+                        <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/Anchor_anirudhha" target="_blank" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/Anchor_anirudhha" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/photo.jpg" alt="Aniruddha Jadhav" style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3); object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About <span>Me</span></h2>
+                <p>Learn more about my journey and expertise</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="assets/photo.jpg" alt="Aniruddha Jadhav" style="width: 100%; max-width: 400px; border-radius: 20px; box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);">
+                </div>
+                <div class="about-text">
+                    <h3><i class="fas fa-star"></i> Professional Summary</h3>
+                    <p>
+                        I am a dedicated Full Stack Developer with a strong foundation in modern web technologies and a passion for solving complex problems. 
+                        With hands-on experience in building scalable applications, I combine technical expertise with creative thinking to deliver exceptional solutions.
+                    </p>
+                    <p>
+                        My journey in technology has equipped me with skills in frontend development, backend engineering, database management, and cloud deployment. 
+                        I'm committed to continuous learning and staying updated with the latest industry trends.
+                    </p>
+                    <p>
+                        Currently, I'm actively seeking opportunities to contribute my skills and grow with innovative teams. 
+                        I'm excited about working on projects that make a real impact.
+                    </p>
+
+                    <h3 style="margin-top: 30px;"><i class="fas fa-tools"></i> Technical Skills</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <h4>Frontend Development</h4>
+                            <p>HTML5, CSS3, JavaScript, React, Vue.js, Tailwind CSS</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Backend Development</h4>
+                            <p>Node.js, Python, Express, Django, REST APIs</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>Database Management</h4>
+                            <p>MongoDB, PostgreSQL, MySQL, Firebase</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4>AI/ML & Cloud</h4>
+                            <p>Python, TensorFlow, AWS, Google Cloud, Docker</p>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESUME SECTION ===== -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-title">
+                <h2>My <span>Resume</span></h2>
+                <p>Education, Experience & Certifications</p>
+            </div>
+            <div class="resume-content">
+                <!-- Education -->
+                <div class="resume-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    
+                    <div class="resume-item">
+                        <h4>MSCCA - Master of Science in Computer Science</h4>
+                        <p>MIT Arts, Commerce & Science College (MITACSS)</p>
+                        <p>Grade: A</p>
+                        <p class="date">Aug 2025 - Jul 2027</p>
+                        <p style="color: #bbb; margin-top: 5px;"><strong>Activities & Societies:</strong> ANCHORING LEADERSHIP UR</p>
+                        <p style="color: #bbb; margin-top: 5px;"><strong>Skills:</strong> Project Planning, Marketing Strategy, Human Resource Development, Strategic Human Resource Planning, Python</p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Certifications & Training</h4>
+                        <p>✓ AI and Data Analytics Training (NIIT Foundation)</p>
+                        <p>✓ Full Stack Web Development</p>
+                        <p>✓ Python for Data Science & Analytics</p>
+                        <p>✓ Microsoft Power BI</p>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="resume-section">
+                    <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                    
+                    <div class="resume-item">
+                        <h4>AI and Data Analytics Trainer</h4>
+                        <p>NIIT Foundation · Full-time</p>
+                        <p>• Training and mentoring on AI and Data Analytics concepts</p>
+                        <p>• Expertise in Microsoft Power BI for data visualization</p>
+                        <p>• Location: Pune/Pimpri-Chinchwad Area</p>
+                        <p class="date">Nov 2025 - Present (2 months)</p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Data Analyst</h4>
+                        <p>GTEC COMPUTER EDUCATIONAL CENTER · Full-time</p>
+                        <p>• Skills: Human Resources (HR), Python (Programming Language), Data Analysis, Strategic Marketing Management, Django, Flask, Anaconda</p>
+                        <p>• Location: Pune/Pimpri-Chinchwad Area (On-site)</p>
+                        <p class="date">Jun 2024 - Nov 2025 (1 yr 6 mos)</p>
+                    </div>
+
+                    <div class="resume-item">
+                        <h4>Junior Developer</h4>
+                        <p>College Projects & Open Source</p>
+                        <p>• Contributed to various open-source projects on GitHub</p>
+                        <p>• Led college web development projects with team coordination</p>
+                        <p class="date">2021 - 2024</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download CV Button -->
+            <div style="text-align: center; margin-top: 50px;">
+                <button class="btn btn-primary" onclick="downloadCV()" style="font-size: 18px; padding: 15px 40px;">
+                    <i class="fas fa-download"></i> Download Full Resume (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My <span>Projects</span></h2>
+                <p>Showcasing my latest work and achievements</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A fully functional e-commerce platform with product catalog, shopping cart, and payment integration. Built with React and Node.js with MongoDB database.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Chatbot Application</h3>
+                        <p>An intelligent chatbot powered by NLP and machine learning. Provides natural language understanding and context-aware responses.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">NLP</span>
+                            <span class="tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Management Tool</h3>
+                        <p>A collaborative task management application with real-time updates, team collaboration features, and progress tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Interactive dashboard for real-time data visualization and analytics. Displays KPIs, trends, and insights with interactive charts.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Mobile App</h3>
+                        <p>A responsive weather application with real-time weather updates, forecasts, and location-based services.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span>
+                            <span class="tag">Weather API</span>
+                            <span class="tag">Geolocation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Tech Blog Platform</h3>
+                        <p>A modern blogging platform with markdown support, comments, categories, and SEO optimization for content creators.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Markdown</span>
+                            <span class="tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In <span>Touch</span></h2>
+                <p>Let's discuss your next project or opportunity</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 style="margin-bottom: 30px; font-size: 1.5rem; color: var(--primary-color);">Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Location</h4>
+                            <p>New Delhi, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:jadhavaniruddha11@gmail.com" style="color: var(--text-color); text-decoration: none;">jadhavaniruddha11@gmail.com</a></p>
+                            <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                <button class="btn btn-primary" style="padding: 8px 15px; font-size: 14px;" onclick="window.location.href='mailto:jadhavaniruddha11@gmail.com'">
+                                    <i class="fas fa-envelope"></i> Send Email
+                                </button>
+                                <button class="btn btn-secondary" style="padding: 8px 15px; font-size: 14px;" onclick="copyEmail('jadhavaniruddha11@gmail.com')">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Phone</h4>
+                            <p>+91 XXXXX XXXXX</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <h4>Availability</h4>
+                            <p>Available for full-time, freelance & contract work</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top: 40px; margin-bottom: 20px; font-size: 1.5rem; color: var(--primary-color);">Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://github.com" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/Anchor_anirudhha" target="_blank" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/Anchor_anirudhha" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 30px; font-size: 1.5rem; color: var(--primary-color);">Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px;">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Aniruddha Jadhav. All rights reserved.</p>
+            <p>
+                Designed & Developed with <span style="color: #ef476f;">❤</span> 
+                using HTML, CSS, JavaScript, Animate.css & Tailwind CSS
+            </p>
+            <p>
+                <a href="#home">Back to Top</a> | 
+                <a href="admin/login.html">Admin Panel</a> | 
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
