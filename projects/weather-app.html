@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Mobile App - Aniruddha Jadhav Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/twinkle-css@1.0.0/dist/twinkle.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #667eea;
+            --secondary: #764ba2;
+            --accent: #f093fb;
+            --dark: #1a1a2e;
+            --light: #16213e;
+            --text: #eaeaea;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--light) 100%);
+            color: var(--text);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 26, 46, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(102, 126, 234, 0.1);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-header {
+            margin-top: 80px;
+            padding: 80px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.1));
+            border-bottom: 2px solid rgba(102, 126, 234, 0.3);
+            animation: slideInDown 0.8s ease-in-out;
+        }
+
+        .project-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .project-header p {
+            font-size: 1.3rem;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tech-badge {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            animation: fadeInUp 0.8s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .section {
+            margin-bottom: 80px;
+            animation: fadeInUp 0.8s ease-in-out;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--accent);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .overview-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(240, 147, 251, 0.05));
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .overview-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(240, 147, 251, 0.1);
+        }
+
+        .overview-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .overview-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(240, 147, 251, 0.1), rgba(102, 126, 234, 0.05));
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            border-left-color: var(--primary);
+            transform: translateX(10px);
+        }
+
+        .feature-card h4 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--dark);
+            transform: translateY(-3px);
+        }
+
+        .btn-back {
+            background: linear-gradient(135deg, var(--secondary), var(--accent));
+            color: white;
+        }
+
+        footer {
+            background: rgba(22, 33, 62, 0.8);
+            border-top: 1px solid rgba(102, 126, 234, 0.3);
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            color: var(--text);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: scale(1.2);
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-header {
+                padding: 50px 20px;
+                margin-top: 60px;
+            }
+
+            .project-header h1 {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-logo">
+            <i class="fas fa-cloud"></i> Aniruddha
+        </div>
+        <div>
+            <a href="../index.html">Portfolio</a>
+            <a href="#overview">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#tech">Technologies</a>
+        </div>
+    </nav>
+
+    <div class="project-header">
+        <h1>🌤️ Weather Mobile App</h1>
+        <p>Cross-platform weather app with real-time updates and location services</p>
+        <div class="tech-stack">
+            <div class="tech-badge">React Native</div>
+            <div class="tech-badge">Weather API</div>
+            <div class="tech-badge">Geolocation</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="overview" class="section">
+            <h2 class="section-title">Project Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Cross-Platform</h3>
+                    <p>Works seamlessly on iOS and Android with native performance</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h3>Weather API</h3>
+                    <p>Integration with OpenWeatherMap for accurate and up-to-date weather data</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Geolocation</h3>
+                    <p>Automatic location detection and multi-location weather tracking</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-bell"></i>
+                    <h3>Notifications</h3>
+                    <p>Push notifications for weather alerts and severe weather warnings</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-cloud-sun-rain"></i> Current Weather</h4>
+                    <p>Display real-time weather conditions including temperature, humidity, wind speed, and atmospheric pressure with intuitive UI.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-calendar"></i> Forecast</h4>
+                    <p>7-day and 14-day weather forecasts with hourly breakdowns, precipitation chances, and UV index information.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-map-location-dot"></i> Multi-Location</h4>
+                    <p>Save and track weather for multiple locations with quick switching and favorite locations for easy access.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-chart-line"></i> Weather Analytics</h4>
+                    <p>Historical weather data and trends showing temperature patterns, precipitation statistics, and seasonal changes.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-moon"></i> Dark/Light Mode</h4>
+                    <p>User-friendly interface with automatic theme switching based on system preferences and time of day.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-warning"></i> Severe Weather Alerts</h4>
+                    <p>Real-time notifications for storms, extreme temperatures, and other severe weather conditions with safety recommendations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="section">
+            <h2 class="section-title">Technologies Used</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React Native</h3>
+                    <p>Cross-platform mobile framework for iOS and Android development</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-cloud"></i>
+                    <h3>OpenWeatherMap API</h3>
+                    <p>Comprehensive weather data API with real-time and forecast information</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-map"></i>
+                    <h3>Geolocation Services</h3>
+                    <p>GPS and location-based services for automatic location detection</p>
+                </div>
+                <div class="overview-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Local Storage</h3>
+                    <p>SQLite for offline data caching and user preferences management</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div style="text-align: center;">
+                <h2 class="section-title" style="display: inline-block;">Download & Try</h2>
+                <div class="project-links" style="justify-content: center; margin-top: 40px;">
+                    <a href="#" class="btn btn-primary" target="_blank">
+                        <i class="fab fa-app-store"></i> App Store
+                    </a>
+                    <a href="#" class="btn btn-secondary" target="_blank">
+                        <i class="fab fa-google-play"></i> Google Play
+                    </a>
+                    <a href="../index.html" class="btn btn-back">
+                        <i class="fas fa-arrow-left"></i> Back to Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Aniruddha Jadhav. All rights reserved.</p>
+    </footer>
+</body>
+</html>
