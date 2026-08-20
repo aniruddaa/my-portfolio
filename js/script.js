@@ -312,6 +312,7 @@
        ================================================================ */
     function initAvatarVideo() {
         const video = document.getElementById('avatarVideo');
+        const backgroundVideo = document.getElementById('heroBgVideo');
         const fallback = document.getElementById('avatarFallback');
         const voiceBtn = document.getElementById('voiceBtn');
 
@@ -345,6 +346,7 @@
                 if (video.classList.contains('failed')) return;
                 const isMuted = video.muted;
                 video.muted = !isMuted;
+                if (backgroundVideo) backgroundVideo.muted = !isMuted;
                 voiceBtn.classList.toggle('active', isMuted);
                 voiceBtn.setAttribute('aria-label',
                     isMuted ? 'Mute avatar voice' : 'Enable avatar voice');
