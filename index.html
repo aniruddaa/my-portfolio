@@ -1,1 +1,612 @@
-<CONTENT_PLACEHOLDER>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO ===== -->
+    <title>Aniruddha Jadhav | Data Analyst | Data Scientist | BI Developer</title>
+    <meta name="description" content="Portfolio of Aniruddha Jadhav — Data Analyst, Data Scientist and BI Developer specialising in Python, SQL, Power BI, data analytics and business intelligence.">
+    <meta name="keywords" content="Aniruddha Jadhav, Data Analyst, Data Scientist, BI Developer, Power BI, Python, SQL, Data Analytics, Business Intelligence, Machine Learning, Portfolio">
+    <meta name="author" content="Aniruddha Jadhav">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://aniruddaa.github.io/my-portfolio/">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Aniruddha Jadhav | Data Analyst | Data Scientist | BI Developer">
+    <meta property="og:description" content="Data Analyst & Data Scientist specialising in Python, SQL, Power BI and business intelligence. Explore my projects, experience and skills.">
+    <meta property="og:url" content="https://aniruddaa.github.io/my-portfolio/">
+    <meta property="og:image" content="assets/photo.jpg">
+    <meta property="og:site_name" content="Aniruddha Jadhav Portfolio">
+
+    <!-- ===== TWITTER / X ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aniruddha Jadhav | Data Analyst | Data Scientist | BI Developer">
+    <meta name="twitter:description" content="Data Analyst & Data Scientist specialising in Python, SQL, Power BI and business intelligence.">
+    <meta name="twitter:image" content="assets/photo.jpg">
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" type="image/png" href="assets/photo.jpg">
+    <link rel="apple-touch-icon" href="assets/photo.jpg">
+
+    <!-- ===== FONTS (Inter + Poppins, preconnect) ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- ===== FONT AWESOME ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ===== STYLES ===== -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- ===== STRUCTURED DATA (JSON-LD) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Aniruddha Jadhav",
+      "jobTitle": "Data Analyst & Data Scientist",
+      "url": "https://aniruddaa.github.io/my-portfolio/",
+      "email": "mailto:jadhavaniruddha11@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/aniruddha-jadhav-5626b4313/",
+        "https://github.com/aniruddaa",
+        "https://instagram.com/Anchor_anirudhha",
+        "https://facebook.com/Anchor_anirudhha"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ===== THREE.JS / CANVAS PARTICLE BACKGROUND ===== -->
+    <canvas id="three-bg" class="three-bg" aria-hidden="true"></canvas>
+    <div class="bg-gradient-fallback" aria-hidden="true"></div>
+
+    <!-- ===== CUSTOM CURSOR (desktop only) ===== -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- ===== HEADER & NAVBAR ===== -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo" aria-label="Aniruddha Jadhav — home">
+                <span class="logo-mark">AJ</span>
+                <span class="logo-text">Aniruddha<span class="logo-dot">.</span></span>
+            </a>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="hero">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="container hero-content">
+            <!-- LEFT: text -->
+            <div class="hero-text">
+                <span class="hero-badge" data-reveal>
+                    <i class="fas fa-chart-line"></i> DATA ANALYST • DATA SCIENCE • BI
+                </span>
+                <h1 class="hero-heading" data-reveal>
+                    Hi, I'm <span class="gradient-text">Aniruddha Jadhav</span>
+                </h1>
+                <h2 class="hero-roles" data-reveal>
+                    <span id="typed-role"></span><span class="cursor-blink">|</span>
+                </h2>
+                <p class="hero-intro" data-reveal>
+                    Data Analyst and Data Scientist with hands-on experience in Python, SQL, Power BI and
+                    business intelligence. I turn raw data into actionable insights through analytics,
+                    visualisation and machine learning — and I'm actively seeking opportunities to contribute
+                    to innovative, data-driven teams.
+                </p>
+                <div class="hero-buttons" data-reveal>
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-briefcase"></i> View My Projects
+                    </a>
+                    <button class="btn btn-secondary" onclick="downloadCV()">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                    <a href="#contact" class="btn btn-ghost">
+                        <i class="fas fa-envelope"></i> Let's Connect
+                    </a>
+                </div>
+                <div class="hero-social" data-reveal>
+                    <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="social-link" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/aniruddha-jadhav-5626b4313/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/Anchor_anirudhha" target="_blank" rel="noopener" class="social-link" aria-label="Instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/Anchor_anirudhha" target="_blank" rel="noopener" class="social-link" aria-label="Facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <!-- RIGHT: avatar video + floating tech elements -->
+            <div class="hero-media" data-reveal>
+                <div class="avatar-wrap">
+                    <div class="avatar-glow" aria-hidden="true"></div>
+                    <video
+                        id="avatarVideo"
+                        class="avatar-video"
+                        autoplay loop muted playsinline preload="auto"
+                        poster="assets/avatar/aniruddha-avatar-poster.webp">
+                        <source src="assets/avatar/aniruddha-avatar.mp4" type="video/mp4">
+                    </video>
+                    <img src="assets/avatar/aniruddha-avatar-poster.webp" alt="Aniruddha Jadhav — professional portrait" class="avatar-fallback" id="avatarFallback">
+                    <button class="avatar-voice-btn" id="voiceBtn" aria-label="Enable avatar voice / audio" title="Enable Voice">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <!-- Floating tech cards -->
+                    <div class="float-card fc-1" aria-hidden="true"><i class="fab fa-python"></i><span>Python</span></div>
+                    <div class="float-card fc-2" aria-hidden="true"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="float-card fc-3" aria-hidden="true"><i class="fas fa-chart-pie"></i><span>Power BI</span></div>
+                    <div class="float-card fc-4" aria-hidden="true"><i class="fas fa-brain"></i><span>AI / ML</span></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down" aria-label="Scroll to About section">
+            <span></span>
+        </a>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span class="eyebrow">About Me</span>
+                <h2>Who I <span class="gradient-text">Am</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image" data-reveal>
+                    <div class="about-img-wrap">
+                        <img src="assets/photo.jpg" alt="Aniruddha Jadhav — Data Analyst" loading="lazy">
+                        <div class="about-img-ring" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="about-text" data-reveal>
+                    <h3><i class="fas fa-user-astronaut"></i> Professional Summary</h3>
+                    <p>
+                        I am a dedicated Data Analyst and Data Scientist with a strong foundation in data
+                        analytics, business intelligence and machine learning. With hands-on experience in
+                        building data-driven solutions, I combine technical expertise with analytical thinking
+                        to deliver actionable insights.
+                    </p>
+                    <p>
+                        My journey in technology has equipped me with skills in data analysis, data visualisation,
+                        statistical modelling and Power BI dashboard development. I'm committed to continuous
+                        learning and staying updated with the latest industry trends in data science and AI.
+                    </p>
+                    <p>
+                        Currently, I'm actively seeking opportunities to contribute my skills and grow with
+                        innovative, data-driven teams. I'm excited about working on projects that make a real
+                        impact through data.
+                    </p>
+                    <div class="about-cards">
+                        <div class="about-card"><i class="fas fa-chart-bar"></i><span>Data Analytics</span></div>
+                        <div class="about-card"><i class="fas fa-chart-pie"></i><span>Business Intelligence</span></div>
+                        <div class="about-card"><i class="fas fa-brain"></i><span>Machine Learning</span></div>
+                        <div class="about-card"><i class="fab fa-python"></i><span>Python</span></div>
+                        <div class="about-card"><i class="fas fa-database"></i><span>SQL</span></div>
+                        <div class="about-card"><i class="fas fa-chart-line"></i><span>Power BI</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span class="eyebrow">Technical Skills</span>
+                <h2>My <span class="gradient-text">Expertise</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-group" data-reveal>
+                    <div class="skill-group-head"><i class="fas fa-chart-bar"></i><h3>Data Analytics</h3></div>
+                    <div class="skill-chips">
+                        <span class="chip">Python</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">PostgreSQL</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">Data Analysis</span>
+                        <span class="chip">Anaconda</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal>
+                    <div class="skill-group-head"><i class="fas fa-chart-pie"></i><h3>Visualisation & BI</h3></div>
+                    <div class="skill-chips">
+                        <span class="chip">Microsoft Power BI</span>
+                        <span class="chip">Chart.js</span>
+                        <span class="chip">Data Visualisation</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal>
+                    <div class="skill-group-head"><i class="fas fa-brain"></i><h3>Machine Learning & AI</h3></div>
+                    <div class="skill-chips">
+                        <span class="chip">TensorFlow</span>
+                        <span class="chip">NLP</span>
+                        <span class="chip">Flask</span>
+                        <span class="chip">AI / ML</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal>
+                    <div class="skill-group-head"><i class="fas fa-laptop-code"></i><h3>Web Development</h3></div>
+                    <div class="skill-chips">
+                        <span class="chip">HTML5</span>
+                        <span class="chip">CSS3</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">React</span>
+                        <span class="chip">Vue.js</span>
+                        <span class="chip">Next.js</span>
+                        <span class="chip">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal>
+                    <div class="skill-group-head"><i class="fas fa-server"></i><h3>Backend & Database</h3></div>
+                    <div class="skill-chips">
+                        <span class="chip">Node.js</span>
+                        <span class="chip">Express</span>
+                        <span class="chip">Django</span>
+                        <span class="chip">REST APIs</span>
+                        <span class="chip">MongoDB</span>
+                        <span class="chip">Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-group" data-reveal>
+                    <div class="skill-group-head"><i class="fas fa-cloud"></i><h3>Cloud & Deployment</h3></div>
+                    <div class="skill-chips">
+                        <span class="chip">AWS</span>
+                        <span class="chip">Google Cloud</span>
+                        <span class="chip">Docker</span>
+                        <span class="chip">Vercel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span class="eyebrow">Portfolio</span>
+                <h2>My <span class="gradient-text">Projects</span></h2>
+                <p>Showcasing my latest work and data-driven solutions</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1 -->
+                <article class="project-card" data-reveal>
+                    <div class="project-image">
+                        <i class="fas fa-globe"></i>
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-cat">Web Development</span>
+                        <h3>E-Commerce Platform</h3>
+                        <p>A fully functional e-commerce platform with product catalog, shopping cart, and payment integration. Built with React and Node.js with MongoDB database.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/ecommerce.html" class="plink"><i class="fas fa-info-circle"></i> View Details</a>
+                            <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card" data-reveal>
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-cat">AI / Machine Learning</span>
+                        <h3>AI Chatbot Application</h3>
+                        <p>An intelligent chatbot powered by NLP and machine learning. Provides natural language understanding and context-aware responses.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">NLP</span><span class="tag">Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/chatbot.html" class="plink"><i class="fas fa-info-circle"></i> View Details</a>
+                            <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card" data-reveal>
+                    <div class="project-image">
+                        <i class="fas fa-tasks"></i>
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-cat">Web Development</span>
+                        <h3>Task Management Tool</h3>
+                        <p>A collaborative task management application with real-time updates, team collaboration features, and progress tracking.</p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span><span class="tag">Firebase</span><span class="tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/task-manager.html" class="plink"><i class="fas fa-info-circle"></i> View Details</a>
+                            <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-reveal>
+                    <div class="project-image">
+                        <i class="fas fa-chart-bar"></i>
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-cat">Data Analytics</span>
+                        <h3>Data Analytics Dashboard</h3>
+                        <p>Interactive dashboard for real-time data visualization and analytics. Displays KPIs, trends, and insights with interactive charts.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span><span class="tag">Chart.js</span><span class="tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/analytics.html" class="plink"><i class="fas fa-info-circle"></i> View Details</a>
+                            <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card" data-reveal>
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-cat">Mobile App</span>
+                        <h3>Weather Mobile App</h3>
+                        <p>A responsive weather application with real-time weather updates, forecasts, and location-based services.</p>
+                        <div class="project-tags">
+                            <span class="tag">React Native</span><span class="tag">Weather API</span><span class="tag">Geolocation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/weather-app.html" class="plink"><i class="fas fa-info-circle"></i> View Details</a>
+                            <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card" data-reveal>
+                    <div class="project-image">
+                        <i class="fas fa-blog"></i>
+                        <div class="project-image-overlay"></div>
+                    </div>
+                    <div class="project-content">
+                        <span class="project-cat">Web Development</span>
+                        <h3>Tech Blog Platform</h3>
+                        <p>A modern blogging platform with markdown support, comments, categories, and SEO optimization for content creators.</p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span><span class="tag">Markdown</span><span class="tag">Vercel</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="projects/blog.html" class="plink"><i class="fas fa-info-circle"></i> View Details</a>
+                            <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="plink"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <div class="projects-cta" data-reveal>
+                <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <i class="fab fa-github"></i> View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span class="eyebrow">Career</span>
+                <h2>My <span class="gradient-text">Experience</span></h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-node"><i class="fas fa-chart-line"></i></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Nov 2025 — Present</span>
+                        <h3>AI and Data Analytics Trainer</h3>
+                        <p class="timeline-company"><i class="fas fa-building"></i> NIIT Foundation · Full-time</p>
+                        <ul>
+                            <li>Training and mentoring on AI and Data Analytics concepts</li>
+                            <li>Expertise in Microsoft Power BI for data visualization</li>
+                            <li>Location: Pune / Pimpri-Chinchwad Area</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-node"><i class="fas fa-database"></i></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Jun 2024 — Nov 2025 · 1 yr 6 mos</span>
+                        <h3>Data Analyst</h3>
+                        <p class="timeline-company"><i class="fas fa-building"></i> GTEC Computer Educational Center · Full-time</p>
+                        <ul>
+                            <li>Skills: Human Resources (HR), Python, Data Analysis, Strategic Marketing Management, Django, Flask, Anaconda</li>
+                            <li>Location: Pune / Pimpri-Chinchwad Area (On-site)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-node"><i class="fas fa-code"></i></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">2021 — 2024</span>
+                        <h3>Junior Developer</h3>
+                        <p class="timeline-company"><i class="fas fa-building"></i> College Projects & Open Source</p>
+                        <ul>
+                            <li>Contributed to various open-source projects on GitHub</li>
+                            <li>Led college web development projects with team coordination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION & CERTIFICATIONS ===== -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span class="eyebrow">Qualifications</span>
+                <h2>Education & <span class="gradient-text">Certifications</span></h2>
+            </div>
+            <div class="edu-grid">
+                <div class="edu-card" data-reveal>
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>MSCCA — Master of Science in Computer Science</h3>
+                    <p class="edu-school">MIT Arts, Commerce & Science College (MITACSS)</p>
+                    <p class="edu-meta"><i class="fas fa-calendar"></i> Aug 2025 — Jul 2027 &nbsp;·&nbsp; <i class="fas fa-star"></i> Grade: A</p>
+                    <p class="edu-detail"><strong>Activities & Societies:</strong> Anchoring Leadership UR</p>
+                    <p class="edu-detail"><strong>Skills:</strong> Project Planning, Marketing Strategy, Human Resource Development, Strategic Human Resource Planning, Python</p>
+                </div>
+            </div>
+
+            <h3 class="cert-heading" data-reveal><i class="fas fa-certificate"></i> Certifications & Training</h3>
+            <div class="cert-grid">
+                <div class="cert-card" data-reveal>
+                    <div class="cert-badge"><i class="fas fa-robot"></i></div>
+                    <h4>AI and Data Analytics Training</h4>
+                    <p>NIIT Foundation</p>
+                </div>
+                <div class="cert-card" data-reveal>
+                    <div class="cert-badge"><i class="fas fa-laptop-code"></i></div>
+                    <h4>Full Stack Web Development</h4>
+                    <p>Professional Certification</p>
+                </div>
+                <div class="cert-card" data-reveal>
+                    <div class="cert-badge"><i class="fab fa-python"></i></div>
+                    <h4>Python for Data Science & Analytics</h4>
+                    <p>Professional Certification</p>
+                </div>
+                <div class="cert-card" data-reveal>
+                    <div class="cert-badge"><i class="fas fa-chart-column"></i></div>
+                    <h4>Microsoft Power BI</h4>
+                    <p>Professional Certification</p>
+                </div>
+            </div>
+
+            <div class="resume-cta" data-reveal>
+                <button class="btn btn-primary" onclick="downloadCV()">
+                    <i class="fas fa-download"></i> Download Full Resume (PDF)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title" data-reveal>
+                <span class="eyebrow">Get In Touch</span>
+                <h2>Let's <span class="gradient-text">Connect</span></h2>
+                <p>Let's discuss your next project or opportunity</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-reveal>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h4>Location</h4><p>New Delhi, India</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:jadhavaniruddha11@gmail.com" class="link-plain">jadhavaniruddha11@gmail.com</a></p>
+                            <div class="contact-btns">
+                                <a href="mailto:jadhavaniruddha11@gmail.com" class="btn btn-primary btn-sm"><i class="fas fa-envelope"></i> Email Me</a>
+                                <button class="btn btn-secondary btn-sm" onclick="copyEmail()"><i class="fas fa-copy"></i> Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div><h4>Phone</h4><p>+91 XXXXX XXXXX</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div><h4>Availability</h4><p>Available for full-time, freelance & contract work</p></div>
+                    </div>
+                    <div class="contact-actions">
+                        <a href="https://www.linkedin.com/in/aniruddha-jadhav-5626b4313/" target="_blank" rel="noopener" class="btn btn-primary btn-sm"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                        <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"><i class="fab fa-github"></i> GitHub</a>
+                        <button class="btn btn-ghost btn-sm" onclick="downloadCV()"><i class="fas fa-download"></i> Resume</button>
+                    </div>
+                </div>
+                <div class="contact-form" data-reveal>
+                    <h3>Send Me a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project inquiry" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-mark">AJ</span> Aniruddha Jadhav
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/aniruddaa" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/aniruddha-jadhav-5626b4313/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://instagram.com/Anchor_anirudhha" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/Anchor_anirudhha" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <p>Designed & Built by Aniruddha Jadhav</p>
+            <p class="footer-copy">&copy; <span id="year">2024</span> Aniruddha Jadhav. All rights reserved.</p>
+            <p class="footer-links">
+                <a href="#home">Back to Top</a> ·
+                <a href="admin/login.html">Admin</a> ·
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script src="js/script.js"></script>
+</body>
+</html>
