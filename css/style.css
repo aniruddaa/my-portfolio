@@ -1,1 +1,36 @@
-PLACEHOLDER_CSS
+-� ================================================================
+   ANIRUDDHA JADHAV — 3D AI-POWERED DATA ANALYST PORTFOLIO
+   Design System & Stylesheet
+   ================================================================ */
+
+/* ===== FONTS (fallback — main load is in <head>) ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+    /* Brand palette */
+    --primary:   #0B4DBA;
+    --secondary: #2563EB;
+    --accent:    #00B8FF;
+    --bg-light:  #F8FAFC;
+    --bg-dark:   #07111F;
+    --bg-darker: #050B16;
+    --white:     #FFFFFF;
+
+    /* Semantic */
+    --text:        #E2E8F0;
+    --text-muted:  #94A3B8;
+    --text-dark:   #0F172A;
+    --text-dim:   #64748B;
+    --border:      rgba(0, 184, 255, 0.12);
+    --border-strong: rgba(0, 184, 255, 0.30);
+
+    /* Glass */
+    --glass-bg:    rgba(15, 30, 55, 0.55);
+    --glass-border: rgba(0, 184, 255, 0.18);
+    --glass-blur:  14px;
+
+    /* Gradients */
+    --grad-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    --grad-accent:  linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
+    --grad-text:    linear-gradient(135deg, var(--accent) 0%, #60A5FA 50%, var(--secondary) 100%);
