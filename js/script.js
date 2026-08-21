@@ -263,13 +263,13 @@
 
     /* ================================================================
        TYPED ROLE ANIMATION
-       Cycles: Data Analyst | Data Scientist | BI Developer
+    Cycles: Data Analyst | Data Scientist | BI Developer | AI Automation Freelancer
        ================================================================ */
     function initTypedRoles() {
         const el = document.getElementById('typed-role');
         if (!el) return;
 
-        const roles = ['Data Analyst', 'Data Scientist', 'BI Developer'];
+        const roles = ['Data Analyst', 'Data Scientist', 'BI Developer', 'AI Automation Freelancer'];
 
         if (prefersReducedMotion) {
             el.textContent = roles.join(' | ');
@@ -467,6 +467,56 @@
         if (y) y.textContent = new Date().getFullYear();
     }
 
+    /* ===== THEME SWITCHER ===== */
+    function initThemeSwitcher() {
+        const toggle = document.getElementById('themeToggle');
+        if (!toggle) return;
+        const stored = localStorage.getItem('portfolioTheme');
+        const setTheme = function (light) {
+            document.body.classList.toggle('light-theme', light);
+            toggle.setAttribute('aria-pressed', String(light));
+            toggle.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+            toggle.innerHTML = light ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+        };
+        setTheme(stored === 'light');
+        toggle.addEventListener('click', function () {
+            const light = !document.body.classList.contains('light-theme');
+            localStorage.setItem('portfolioTheme', light ? 'light' : 'dark');
+            setTheme(light);
+        });
+    }
+
+    /* ===== REAL REPOSITORY FILTERING ===== */
+    function initGithubExplorer() {
+        const cards = Array.from(document.querySelectorAll('.github-card'));
+        const search = document.getElementById('githubSearch');
+        const empty = document.getElementById('githubEmpty');
+        const pills = Array.from(document.querySelectorAll('.filter-pill'));
+        if (!cards.length || !search || !empty) return;
+        let filter = 'all';
+        const render = function () {
+            const query = search.value.trim().toLowerCase();
+            let visible = 0;
+            cards.forEach(function (card) {
+                const matchesFilter = filter === 'all' || card.dataset.language === filter;
+                const matchesSearch = !query || card.dataset.name.toLowerCase().includes(query) || card.textContent.toLowerCase().includes(query);
+                const show = matchesFilter && matchesSearch;
+                card.hidden = !show;
+                if (show) visible += 1;
+            });
+            empty.hidden = visible !== 0;
+        };
+        pills.forEach(function (pill) {
+            pill.addEventListener('click', function () {
+                filter = pill.dataset.filter;
+                pills.forEach(function (item) { item.classList.toggle('active', item === pill); });
+                render();
+            });
+        });
+        search.addEventListener('input', render);
+        render();
+    }
+
     /* ================================================================
        INIT ALL
        ================================================================ */
@@ -480,6 +530,8 @@
         initCustomCursor();
         initContactForm();
         initYear();
+        initThemeSwitcher();
+        initGithubExplorer();
     });
 
     /* ================================================================
