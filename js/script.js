@@ -338,6 +338,17 @@
             if (fallback) fallback.style.display = 'block';
         });
 
+        video.addEventListener('loadedmetadata', function () {
+            if (!voiceBtn || !video.captureStream) return;
+            const hasAudio = video.captureStream().getAudioTracks().length > 0;
+            if (!hasAudio) {
+                voiceBtn.disabled = true;
+                voiceBtn.classList.add('no-audio');
+                voiceBtn.setAttribute('aria-label', 'No voice track in avatar video');
+                voiceBtn.title = 'This video has no audio track';
+            }
+        });
+
         tryPlay();
 
         // Voice toggle — unmute/mute (user gesture)
