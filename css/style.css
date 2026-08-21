@@ -9,12 +9,13 @@
 /* ===== DESIGN TOKENS ===== */
 :root {
     /* Brand palette */
-    --primary:   #0B4DBA;
-    --secondary: #2563EB;
-    --accent:    #00B8FF;
+    --primary:   #1261D6;
+    --secondary: #377DFF;
+    --accent:    #19D3FF;
+    --accent-warm: #FF8A3D;
     --bg-light:  #F8FAFC;
-    --bg-dark:   #07111F;
-    --bg-darker: #050B16;
+    --bg-dark:   #060C19;
+    --bg-darker: #02050D;
     --white:     #FFFFFF;
 
     /* Semantic */
@@ -26,7 +27,7 @@
     --border-strong: rgba(0, 184, 255, 0.30);
 
     /* Glass */
-    --glass-bg:    rgba(15, 30, 55, 0.55);
+    --glass-bg:    rgba(10, 24, 49, 0.68);
     --glass-border: rgba(0, 184, 255, 0.18);
     --glass-blur:  14px;
 
@@ -34,8 +35,9 @@
     --grad-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
     --grad-accent:  linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
     --grad-text:    linear-gradient(135deg, var(--accent) 0%, #60A5FA 50%, var(--secondary) 100%);
-    --grad-hero-bg: radial-gradient(ellipse at 70% 20%, rgba(37,99,235,0.18) 0%, transparent 55%),
-                    radial-gradient(ellipse at 20% 80%, rgba(0,184,255,0.12) 0%, transparent 50%);
+    --grad-hero-bg: radial-gradient(ellipse at 72% 25%, rgba(55,125,255,0.26) 0%, transparent 48%),
+                    radial-gradient(ellipse at 15% 80%, rgba(25,211,255,0.15) 0%, transparent 44%),
+                    radial-gradient(ellipse at 90% 90%, rgba(255,138,61,0.08) 0%, transparent 35%);
 
     /* Motion */
     --transition:       all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -130,7 +132,7 @@ body {
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -385,21 +387,51 @@ section {
     position: relative;
     overflow: hidden;
 }
+.hero::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    right: -10%;
+    bottom: -27%;
+    height: 58%;
+    opacity: .2;
+    transform: perspective(420px) rotateX(62deg);
+    transform-origin: bottom;
+    background-image: linear-gradient(rgba(25,211,255,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(25,211,255,.22) 1px, transparent 1px);
+    background-size: 58px 58px;
+    mask-image: linear-gradient(to top, black, transparent 88%);
+    pointer-events: none;
+    z-index: 1;
+    animation: grid-drift 14s linear infinite;
+}
+@keyframes grid-drift { to { background-position: 0 58px, 58px 0; } }
+.hero-network-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .3;
+    mix-blend-mode: screen;
+    filter: saturate(1.25) contrast(1.1) brightness(.82);
+    pointer-events: none;
+    z-index: 0;
+}
 .hero-bg-video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.16;
-    filter: saturate(0.8) contrast(1.05);
+    opacity: 0.12;
+    filter: saturate(0.7) contrast(1.05);
     pointer-events: none;
     z-index: 0;
 }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(5, 11, 22, 0.98) 0%, rgba(5, 11, 22, 0.82) 48%, rgba(5, 11, 22, 0.58) 100%), var(--grad-hero-bg);
+    background: linear-gradient(90deg, rgba(2, 5, 13, .97) 0%, rgba(2, 5, 13, .78) 44%, rgba(2, 5, 13, .5) 100%), var(--grad-hero-bg);
     pointer-events: none;
     z-index: 0;
 }
@@ -412,6 +444,7 @@ section {
     width: 100%;
     position: relative;
     z-index: 2;
+    perspective: 1100px;
 }
 
 /* Hero text */
@@ -490,7 +523,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    transform-style: preserve-3d;
+    animation: avatar-float 8s ease-in-out infinite;
 }
+@keyframes avatar-float { 0%, 100% { transform: translateY(0) rotateY(-2deg); } 50% { transform: translateY(-9px) rotateY(2deg); } }
 
 .avatar-glow {
     position: absolute;
@@ -1431,4 +1467,5 @@ textarea:focus-visible {
 body.light-theme { --bg-dark: #f5f8fc; --bg-darker: #e8eff8; --text: #10213a; --text-muted: #52647a; --white: #07111f; --glass-bg: rgba(255,255,255,.75); --glass-border: rgba(11,77,186,.18); --border: rgba(11,77,186,.16); background: var(--bg-light); }.light-theme .hero-overlay { background: linear-gradient(90deg, rgba(245,248,252,.98), rgba(245,248,252,.78) 55%, rgba(245,248,252,.48)), var(--grad-hero-bg); }.light-theme .site-header { background: rgba(245,248,252,.88); }.light-theme .capability-rail, .light-theme .services-section, .light-theme .github-section, .light-theme .process-section { background: var(--bg-darker); }.light-theme .service-card, .light-theme .github-card { background: rgba(255,255,255,.75); }.light-theme .avatar-video { box-shadow: var(--shadow); }
 @media (max-width: 980px) { .service-grid { grid-template-columns: repeat(2, 1fr); }.agentic-layout { grid-template-columns: 1fr; gap: 45px; }.github-grid { grid-template-columns: repeat(2, 1fr); }.process-grid { grid-template-columns: repeat(3, 1fr); }.process-grid article:nth-child(3) { border-right: 0; }.process-grid article:nth-child(n+4) { border-top: 0; } }
 @media (max-width: 700px) { .capability-grid { grid-template-columns: repeat(2, 1fr); }.capability-grid > div:nth-child(2) { border-right: 0; }.capability-grid > div:nth-child(-n+2) { border-bottom: 1px solid var(--border); }.data-action-section { padding: 75px 20px; }.data-action-flow { align-items: stretch; flex-direction: column; }.data-action-flow > i { align-self: center; transform: rotate(90deg); }.service-grid, .github-grid { grid-template-columns: 1fr; }.services-section, .github-section, .process-section, .agentic-section { padding: 80px 20px; }.github-toolbar { display: block; }.search-field { margin-bottom: 14px; }.process-grid { grid-template-columns: 1fr; }.process-grid article, .process-grid article:nth-child(n+4) { border-right: 0; border-top: 1px solid var(--border); min-height: 0; }.agent-flow-row { grid-template-columns: 1fr; }.agent-flow-row .agent-node { width: 100%; }.theme-toggle { margin-right: 4px; }.nav-container { gap: 8px; } }
-@media (prefers-reduced-motion: reduce) { .agent-arrow { animation: none; }.service-card:hover, .github-card:hover { transform: none; } }
+@media (max-width: 700px) { .hero-network-video { opacity: .16; }.hero::before { opacity: .1; animation: none; } }
+@media (prefers-reduced-motion: reduce) { .agent-arrow, .avatar-wrap, .hero::before { animation: none; }.service-card:hover, .github-card:hover { transform: none; } }

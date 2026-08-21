@@ -313,6 +313,7 @@
     function initAvatarVideo() {
         const video = document.getElementById('avatarVideo');
         const backgroundVideo = document.getElementById('heroBgVideo');
+        const networkVideo = document.getElementById('heroNetworkVideo');
         const fallback = document.getElementById('avatarFallback');
         const voiceBtn = document.getElementById('voiceBtn');
 
@@ -337,6 +338,13 @@
             video.classList.add('failed');
             if (fallback) fallback.style.display = 'block';
         });
+
+        if (networkVideo) {
+            networkVideo.addEventListener('error', function () {
+                networkVideo.style.display = 'none';
+            });
+            if (prefersReducedMotion) networkVideo.pause();
+        }
 
         video.addEventListener('loadedmetadata', function () {
             if (!voiceBtn || !video.captureStream) return;
